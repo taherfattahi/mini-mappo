@@ -1,11 +1,13 @@
-
-
 ##### What is MAPPO?
 <b>MAPPO</b> adapts the popular PPO algorithm for multi-agent environments. It relies on a specific paradigm called Centralized Training, Decentralized Execution (CTDE).
 
 1) Decentralized Execution (The Actor): When the agents are actually playing (or "executing"), they only see their own local observations. They don't know what others see.
 
 2) Centralized Training (The Critic): During training, we allow the "Critic" (the network that estimates how good a situation is) to see everything—the global state or the observations of all agents combined. This helps the agents learn cooperative strategies faster.
+
+## Demo Video
+[![IMAGE](image/frame.jpg)](https://youtu.be/Fn9okCSeA1Q)
+
 
 ##### Architecture
 - Actor ($\pi_{\theta}$): Input is the local observation ($o_i$). Output is the action probability distribution.
